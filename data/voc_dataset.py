@@ -77,6 +77,7 @@ class VOCBboxDataset:
             data_dir, 'ImageSets/Main/{0}.txt'.format(split))
 
         self.ids = [id_.strip() for id_ in open(id_list_file)]
+        #strip()方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列。
         self.data_dir = data_dir
         self.use_difficult = use_difficult
         self.return_difficult = return_difficult
@@ -102,6 +103,7 @@ class VOCBboxDataset:
         id_ = self.ids[i]
         anno = ET.parse(
             os.path.join(self.data_dir, 'Annotations', id_ + '.xml'))
+        #关于xml解析：https://www.cnblogs.com/thisyan/p/9699939.html
         bbox = list()
         label = list()
         difficult = list()
