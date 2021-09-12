@@ -174,7 +174,7 @@ def bbox_iou(bbox_a, bbox_b):
         raise IndexError
 
     # top left
-    tl = xp.maximum(bbox_a[:, None, :2], bbox_b[:, :2])
+    tl = xp.maximum(bbox_a[:, None, :2], bbox_b[:, :2]) #这里None==numpy.newaxis
     # bottom right
     br = xp.minimum(bbox_a[:, None, 2:], bbox_b[:, 2:])
 
