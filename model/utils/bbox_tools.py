@@ -185,7 +185,7 @@ def bbox_iou(bbox_a, bbox_b):
 
 
 def __test():
-    pass
+    pass #pass不做任何事情，一般用做占位语句。
 
 
 if __name__ == '__main__':
