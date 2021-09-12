@@ -130,6 +130,7 @@ def bbox2loc(src_bbox, dst_bbox):
     base_ctr_x = dst_bbox[:, 1] + 0.5 * base_width
 
     eps = xp.finfo(height.dtype).eps
+    #finfo函数是根据height.dtype类型来获得信息，获得符合这个类型的float型，eps是取非负的最小值。
     height = xp.maximum(height, eps)
     width = xp.maximum(width, eps)
 
