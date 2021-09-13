@@ -105,7 +105,7 @@ class ProposalTargetCreator(object):
         pos_roi_per_this_image = int(min(pos_roi_per_image, pos_index.size))
         if pos_index.size > 0:
             pos_index = np.random.choice(
-                pos_index, size=pos_roi_per_this_image, replace=False)
+                pos_index, size=pos_roi_per_this_image, replace=False) #replace=False表示不能取相同的元素
 
         # Select background RoIs as those within
         # [neg_iou_thresh_lo, neg_iou_thresh_hi).
