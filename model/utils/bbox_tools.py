@@ -5,7 +5,7 @@ import six
 from six import __init__
 
 
-def loc2bbox(src_bbox, loc):  #计算bounding box的GT
+def loc2bbox(src_bbox, loc):  #计算bounding box修正后的值
     """Decode bounding boxes from bounding box offsets and scales.
 
     Given bounding box offsets and scales computed by
