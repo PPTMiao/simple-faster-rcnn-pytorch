@@ -272,6 +272,7 @@ def _unmap(data, count, index, fill=0):
         ret[index] = data
     else:
         ret = np.empty((count,) + data.shape[1:], dtype=data.dtype)
+        #notice:(a,)+(b,)=(a,b);(a,)+(b,c)=(a,b,c)...
         ret.fill(fill)
         ret[index, :] = data
     return ret
