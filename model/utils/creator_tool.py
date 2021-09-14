@@ -263,6 +263,8 @@ class AnchorTargetCreator(object):
 def _unmap(data, count, index, fill=0):
     # Unmap a subset of item (data) back to the original set of items (of
     # size count)
+    # label = _unmap(label, n_anchor, inside_index, fill=-1)
+    # loc = _unmap(loc, n_anchor, inside_index, fill=0)
 
     if len(data.shape) == 1:
         ret = np.empty((count,), dtype=data.dtype)
