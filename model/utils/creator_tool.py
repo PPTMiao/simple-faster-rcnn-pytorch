@@ -398,6 +398,7 @@ class ProposalCreator:
         roi = loc2bbox(anchor, loc)
 
         # Clip predicted boxes to image.
+        #slice(start,end,step)
         roi[:, slice(0, 4, 2)] = np.clip(
             roi[:, slice(0, 4, 2)], 0, img_size[0])
         roi[:, slice(1, 4, 2)] = np.clip(
