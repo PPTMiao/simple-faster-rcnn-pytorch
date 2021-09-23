@@ -52,7 +52,7 @@ class RegionProposalNetwork(nn.Module):
         self.feat_stride = feat_stride
         self.proposal_layer = ProposalCreator(self, **proposal_creator_params)
         n_anchor = self.anchor_base.shape[0]
-        self.conv1 = nn.Conv2d(in_channels, mid_channels, 3, 1, 1)
+        self.conv1 = nn.Conv2d(in_channels, mid_channels, 3, 1, 1) #kernel_size:3,stride:1,padding:1
         self.score = nn.Conv2d(mid_channels, n_anchor * 2, 1, 1, 0)
         self.loc = nn.Conv2d(mid_channels, n_anchor * 4, 1, 1, 0)
         normal_init(self.conv1, 0, 0.01)
