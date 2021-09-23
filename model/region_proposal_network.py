@@ -194,6 +194,8 @@ def normal_init(m, mean, stddev, truncated=False):
     # x is a parameter
     if truncated:
         m.weight.data.normal_().fmod_(2).mul_(stddev).add_(mean)  # not a perfect approximation
+        #torch.fmod()方法给出除数除以元素的余数。除数可以是数字或张量。
+        #用法：torch.fmod(input, div, out=None)
     else:
         m.weight.data.normal_(mean, stddev)
         m.bias.data.zero_()
