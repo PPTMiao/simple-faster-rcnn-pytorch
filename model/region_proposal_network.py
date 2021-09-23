@@ -109,6 +109,9 @@ class RegionProposalNetwork(nn.Module):
         rpn_locs = self.loc(h)
         # UNNOTE: check whether need contiguous
         # A: Yes
+        # x.contiguous()——把tensor变成在内存中连续分布的形式
+        # contiguous：view只能用在contiguous的variable上。
+        # 如果在view之前用了transpose, permute等，需要用contiguous()来返回一个contiguous copy。
         rpn_locs = rpn_locs.permute(0, 2, 3, 1).contiguous().view(n, -1, 4)
         rpn_scores = self.score(h)
         rpn_scores = rpn_scores.permute(0, 2, 3, 1).contiguous()
