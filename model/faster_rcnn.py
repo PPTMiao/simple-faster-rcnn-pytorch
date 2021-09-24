@@ -15,7 +15,7 @@ from utils.config import opt
 
 def nograd(f):
     def new_f(*args,**kwargs):
-        with t.no_grad():
+        with t.no_grad(): # with torch.no_grad():，强制之后的内容不进行计算图构建，从而不参与反向传播
            return f(*args,**kwargs)
     return new_f
 
