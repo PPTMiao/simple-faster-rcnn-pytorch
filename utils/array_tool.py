@@ -22,7 +22,7 @@ def totensor(data, cuda=True):
     return tensor
 
 
-def scalar(data):
+def scalar(data): #标量
     if isinstance(data, np.ndarray):
         return data.reshape(1)[0]
     if isinstance(data, t.Tensor):
