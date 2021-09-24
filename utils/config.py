@@ -1,5 +1,5 @@
 from pprint import pprint
-
+#print()输出结果都在一行，不方便查看，而pprint()采用分行打印输出，对于数据长度较长的数据，适合采用pprint()打印方式。
 
 # Default Configs for training
 # NOTE that, config items could be overwriten by passing argument through command line.
