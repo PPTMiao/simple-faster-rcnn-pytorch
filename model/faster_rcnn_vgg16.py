@@ -3,6 +3,8 @@ import torch as t
 from torch import nn
 from torchvision.models import vgg16
 from torchvision.ops import RoIPool
+# RoI Pooling:根据输入image，将ROI映射到feature map对应位置，
+# 再将大小不同的feature maps池化成大小相同的feature maps，利于输出到下一层网络中。
 
 from model.region_proposal_network import RegionProposalNetwork
 from model.faster_rcnn import FasterRCNN
