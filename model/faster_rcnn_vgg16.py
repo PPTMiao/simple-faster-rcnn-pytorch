@@ -17,7 +17,7 @@ def decom_vgg16():
     if opt.caffe_pretrain:
         model = vgg16(pretrained=False)
         if not opt.load_path:
-            model.load_state_dict(t.load(opt.caffe_pretrain_path))
+            model.load_state_dict(t.load(opt.caffe_pretrain_path)) # t.load用来加载torch.save()保存的模型文件
     else:
         model = vgg16(not opt.load_path)
 
