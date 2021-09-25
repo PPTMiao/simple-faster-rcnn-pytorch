@@ -212,7 +212,7 @@ class FasterRCNN(nn.Module):
                Each value indicates how confident the prediction is.
 
         """
-        self.eval()
+        self.eval() #在测试时添加。不启用 Batch Normalization 和 Dropout。
         if visualize:
             self.use_preset('visualize')
             prepared_imgs = list()
@@ -262,7 +262,7 @@ class FasterRCNN(nn.Module):
             scores.append(score)
 
         self.use_preset('evaluate')
-        self.train()
+        self.train() # 用于启用 Batch Normalization 和 Dropout。
         return bboxes, labels, scores
 
     def get_optimizer(self):
