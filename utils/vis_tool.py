@@ -130,7 +130,7 @@ def vis_bbox(img, bbox, label=None, score=None, ax=None):
 
 def fig2data(fig):
     """
-    brief Convert a Matplotlib figure to a 4D numpy array with RGBA #A(alpha)代表不透明度
+    brief Convert a Matplotlib figure to a 4D numpy array with RGBA    A(alpha)代表不透明度
     channels and return it
 
     @param fig: a matplotlib figure
