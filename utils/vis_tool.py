@@ -5,7 +5,7 @@ import matplotlib
 import torch as t
 import visdom
 
-matplotlib.use('Agg')
+matplotlib.use('Agg') #使运行不显示图（必须加在其下一行命令前面）
 from matplotlib import pyplot as plot
 
 # from data.voc_dataset import VOC_BBOX_LABEL_NAMES
