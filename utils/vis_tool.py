@@ -210,7 +210,7 @@ class Visualizer(object):
         self.vis.line(Y=np.array([y]), X=np.array([x]),
                       win=name, # win用来将图画到一个特定的window上。
                       opts=dict(title=name),
-                      update=None if x == 0 else 'append',
+                      update=None if x == 0 else 'append', # 指定参数`update='append'`来避免覆盖之前的数值。
                       **kwargs
                       )
         self.index[name] = x + 1
