@@ -58,7 +58,7 @@ class FasterRCNNTrainer(nn.Module):
         self.vis = Visualizer(env=opt.env)
 
         # indicators for training status
-        self.rpn_cm = ConfusionMeter(2)
+        self.rpn_cm = ConfusionMeter(2) #ConfusionMeter(k) 类别数为k的混淆矩阵
         self.roi_cm = ConfusionMeter(21)
         self.meters = {k: AverageValueMeter() for k in LossTuple._fields}  # average loss
 
