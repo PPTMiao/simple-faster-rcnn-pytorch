@@ -176,7 +176,7 @@ def calc_detection_voc_prec_rec(
             gt_bbox_l = gt_bbox[gt_mask_l]
             gt_difficult_l = gt_difficult[gt_mask_l]
 
-            n_pos[l] += np.logical_not(gt_difficult_l).sum()
+            n_pos[l] += np.logical_not(gt_difficult_l).sum() # l是键值
             score[l].extend(pred_score_l)
 
             if len(pred_bbox_l) == 0:
