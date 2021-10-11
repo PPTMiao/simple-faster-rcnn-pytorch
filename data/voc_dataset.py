@@ -82,7 +82,6 @@ class VOCBboxDataset:
         self.use_difficult = use_difficult
         self.return_difficult = return_difficult
         self.label_names = VOC_BBOX_LABEL_NAMES  
-        # VOC_BBOX_LABEL_NAMES类别需要替换成自己标签中类别名称，必须和xml文件里的标签名字一致。
 
     def __len__(self):
         return len(self.ids)
