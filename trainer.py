@@ -255,4 +255,4 @@ def _fast_rcnn_loc_loss(pred_loc, gt_loc, gt_label, sigma):
     loc_loss = _smooth_l1_loss(pred_loc, gt_loc, in_weight.detach(), sigma)
     # Normalize by total number of negtive and positive rois.
     loc_loss /= ((gt_label >= 0).sum().float()) # ignore gt_label==-1 for rpn_loss
-    return loc_loss
+    return loc_loss # return a scale
