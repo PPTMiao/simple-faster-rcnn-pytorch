@@ -284,7 +284,7 @@ def calc_detection_voc_ap(prec, rec, use_07_metric=False):
                 if np.sum(rec[l] >= t) == 0:
                     p = 0
                 else:
-                    p = np.max(np.nan_to_num(prec[l])[rec[l] >= t])
+                    p = np.max(np.nan_to_num(prec[l])[rec[l] >= t]) # 用0代替nan
                 ap[l] += p / 11
         else:
             # correct AP calculation
