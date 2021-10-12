@@ -21,8 +21,8 @@ import resource
 rlimit = resource.getrlimit(resource.RLIMIT_NOFILE)
 #resource.setrlimit(resource.RLIMIT_NOFILE, (20480, rlimit[1]))
 
+#在matplotlib.pyplot库被导入前加“matplotlib.use(‘agg’)”语句的作用是在PyCharm中不显示绘图
 matplotlib.use('agg')
-
 
 def eval(dataloader, faster_rcnn, test_num=10000):
     pred_bboxes, pred_labels, pred_scores = list(), list(), list()
