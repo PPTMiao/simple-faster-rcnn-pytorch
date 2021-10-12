@@ -80,7 +80,7 @@ def train(**kwargs):
 
             if (ii + 1) % opt.plot_every == 0:
                 if os.path.exists(opt.debug_file):
-                    ipdb.set_trace()
+                    ipdb.set_trace() # 设置断点
 
                 # plot loss
                 trainer.vis.plot_many(trainer.get_meter_data())
