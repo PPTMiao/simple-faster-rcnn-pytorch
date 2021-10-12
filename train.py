@@ -3,7 +3,7 @@ import os
 
 import ipdb
 import matplotlib
-from tqdm import tqdm
+from tqdm import tqdm  # 进度条
 
 from utils.config import opt
 from data.dataset import Dataset, TestDataset, inverse_normalize
